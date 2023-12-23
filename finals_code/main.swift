@@ -156,3 +156,78 @@ exit(0)
   } // end of else
  } // end of else
 } // end of signUp()
+
+// create function called main()
+func main() {
+    var Running = true
+    
+    while Running {
+        displayMenu()
+
+    let choice = getChoice()
+    switch choice {
+        case 1:
+            print("                                                     ")
+            print("^      . . . . . . . . . . . . . . . . . . .        ^")
+            print("^            Baguio Contact Information             ^")
+            print("^      . . . . . . . . . . . . . . . . . . .        ^")
+            print("                                                     ")
+            viewContactInfo()
+        case 2:
+            print("                                                     ")
+            print("^      . . . . . . . . . . . . . . . . . . .        ^")
+            print("^                Baguio Tourist Spots               ^")
+            print("^      . . . . . . . . . . . . . . . . . . .        ^")
+            print("                                                     ")
+            viewTouristSpots()
+        case 3:
+            print("                                                     ")
+            print("^      . . . . . . . . . . . . . . . . . . .        ^")
+            print("^              Tourist Spot Totalizer               ^")
+            print("^      . . . . . . . . . . . . . . . . . . .        ^")
+            print("                                                     ")
+            totalizer()
+        case 4:
+            print("                                                     ")
+            print("^      . . . . . . . . . . . . . . . . . . .        ^")
+            print("^           Thank you for using our App!            ^")
+            print("^      . . . . . . . . . . . . . . . . . . .        ^")
+            print("                                                     ")
+            Running = false
+        default:
+            print("^                                                   ^")
+            print("^      Opps! Invalid input. Please try again.       ^")
+            print("^                                                   ^")
+        } // end of switch
+    } // end of while
+} // end of main()
+
+// -~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~
+
+// create function called displayMenu()
+func displayMenu() {
+    print("                                                      ")
+    print("^              BAGUINFORM MAIN MENU                 ^")
+    print("^      - - - - - - - - - - - - - - - - - - -        ^")
+    print("^         [1] View Contact Information              ^")
+    print("^         [2] Tourist Spots                         ^")
+    print("^         [3] Tourist Spot Totalizer                ^")
+    print("^         [4] Exit                                  ^")
+    print("^      - - - - - - - - - - - - - - - - - - -        ^")
+    print("^                                                   ^")
+    print("          Enter choice: ", terminator: " ")
+} // end of displayMenu
+
+
+
+
+
+
+// create func getChoice() for receiving input
+func getChoice() -> Int {
+    if let choice = Int(readLine() ?? "") {
+        return choice
+    } else {
+        return -1
+    } // end of else
+} // end of getChoice()
