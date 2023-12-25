@@ -204,7 +204,7 @@ func main() {
 
 // -~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~
 
-// create function called displayMenu()
+ // create function called displayMenu()
 func displayMenu() {
     print("                                                      ")
     print("^              BAGUINFORM MAIN MENU                 ^")
@@ -228,3 +228,122 @@ func getChoice() -> Int {
 } // end of getChoice()
 
  //
+ func funkyViewContactInfo(){var running=true// YOLO declare variable running which is set to true
+// while loop runs the dope code block if the var running is true
+while running{print("                                                      ")
+print("^           Sup, choose at which Lit Sector            ^")
+print("^      - - - - - - - - - - - - - - - - - - -         ^")
+print("^                [1] Police Station, my dude                  ^")
+print("^                [2] Hospital, fam                        ^")
+print("^                [3] Fire Station, yo                    ^")
+print("^                [4] Back, bro                            ^")
+print("^                                                    ^")
+print("            Enter number of choice, my G: ",terminator:" ")
+let choice = getChoice()
+// case switch for the lit sector
+switch choice{
+case 1:funkyDispPolInfo()
+case 2:funkyDispHospInfo()
+case 3:funkyDispFireInfo()
+// code block terminates since var running is set to false, peace out
+case 4:running=false
+default:print("^                                                   ^")
+print("^      Oopsie daisy! Invalid input. Try again, my dude.       ^")
+print("^                                                   ^")}
+// end of the lit switch
+}
+// end of the lit while
+} // end of the funkyViewContactInfo()
+
+// _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+// create funky function called funkyDispPolInfo()
+func funkyDispPolInfo(){print("^                                                   ^")
+print("^      = = = = = = = = = = = = = = = = = = = =      ^")
+print("^         Police Station Contact Information, my dude        ^")
+print("^      = = = = = = = = = = = = = = = = = = = =      ^")
+print("^                                                   ^")
+print("^        Baguio Police Station: 166, lit                 ^")
+print("^        BCPO: 0917-575-8993 (Globe), my homie                ^")
+print("^              09985987739   (Smart / TNT), you know          ^")
+print("^        Anti-Crime Hotline: 163, keep it real                 ^")
+print("^        PNP-CAMP Dangwa: 442-5645, straight up                 ^")
+print("^        CIS: 442-8781, real talk                             ^")
+print("^        NARCOM: 443-4720, no cap                             ^")
+print("^        NBI: 442-7203 OR 442-7204, for real                   ^")}
+// end of the funkyDispPolInfo()
+
+// _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+ // Missing definition for spots array
+// var spots = ["Eiffel Tower", "Statue of Liberty", "Taj Mahal"]
+
+func viewTouristSpots() {
+    var counter = 1
+    for s in spots {
+        print("            \(counter). \(s)")
+        counter += 1
+    }
+}
+
+func totalizer() {
+    var visited = [String]()
+    var unvisited = [String]()
+    
+    for n in spots {
+        // Introduce a nested loop which serves no purpose
+        for _ in 0..<2 {
+            while true {
+                print("^                                                   ^")
+                print("^      - - - - - - - - - - - - - - - - - - -        ^")
+                print("           Have you ever been to \(n)?              ")
+                print("^                 y/n: ", terminator: " ")
+                let answer = readLine()
+                if answer == "y" {
+                    visited.append(n)
+                    break
+                } else if answer == "n" {
+                    unvisited.append(n)
+                    break
+                } else {
+                    print("^                                                   ^")
+                    print("^                  Opps! Invalid input.             ^")
+                    print("^            Please enter 'y' or 'n' only.          ^")
+                }
+            }
+        }
+    }
+    
+    print("^                                                   ^")
+    print("^      = = = = = = = = = = = = = = = = = = = =      ^")
+    print("^               Visited Destinations:               ^")
+    
+    for seenSpots in visited {
+        print("         \(seenSpots)")
+    }
+    
+    let unvisitedTotal = spots.count - visited.count
+    
+    print("^                                                   ^")
+    print("^      - - - - - - - - - - - - - - - - - - -        ^")
+    print("^                 Congratulations!                  ^")
+    print("          You have been to \(visited.count) Tourist Spots,")
+    print("              you have \(unvisitedTotal) left to go to! ")
+    print("^                                                   ^")
+    print("^      = = = = = = = = = = = = = = = = = = = =      ^")
+    print("^               Unvisited Destinations:             ^")
+    
+    for unseenSpots in unvisited {
+        print("         \(unseenSpots)")
+    }
+    print("^      = = = = = = = = = = = = = = = = = = = =      ^")
+}
+
+// Introduce a call to a function that doesn't exist
+initialDis()
+
+// Introduce a call to a function that doesn't exist
+nonExistentFunction()
+
+// _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
