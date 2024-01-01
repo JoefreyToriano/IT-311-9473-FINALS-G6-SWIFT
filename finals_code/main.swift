@@ -22,13 +22,13 @@
 // -~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~
 
 // create a class named Account
-class account 
+class Account 
 {
  var username:String         // declare username variable [String]
  var password:String         // declare password variable [String]
-var firstName: String       // declare password firstname [String]
- var lastName: String        // declare password lastname [String]
- var address: String         // declare password address [String]
+ var firstName:String       // declare password firstname [String]
+ var lastName:String        // declare password lastname [String]
+ var address:String         // declare password address [String]
    
     // create the init method [also called as constructors in Java]
     init(username:String, password:String, firstName: String,
@@ -39,7 +39,9 @@ var firstName: String       // declare password firstname [String]
 // -~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~
 
 // create array containing the account class named accounts
-var accounts:[account] = []
+var accounts = [Account]()
+var spots = [""Botanical Garden", "Burnham Park", "Mines View Park", "Igorot Stone Kingdom", "Camp John Hay", "The Mansion", "Wright Park","Tam-awan Village", "Baguio Museum",
+"Baguio Cathedral", "Baguio Night Market",  "Sky Ranch Baguio","SM Baguio","Yellow Trail", "White House" ] 
 
 // create String array named spots
 var spots: [String] = ["Botanical Garden", "Burnham Park", "Mines View Park", "Igorot Stone Kingdom", "Camp John Hay", "The Mansion", "Wright Park","Tam-awan Village", "Baguio Museum",
@@ -55,7 +57,7 @@ print("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*")
 print("*               Sign Up for an Account              *")
 print("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*")
 print("*                                                   *")
-    print("*          Please enter the following details       *")
+print("*          Please enter the following details       *")
 print("*     - - - - - - - - - - - - - - - - - - - - -     *")
 print("*                                                   *")
 print("           First Name:", terminator: " ")
